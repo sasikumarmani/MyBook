@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="../styles/feed.css"/>
+<script src="../scripts/feed.js"></script>
+</head>
+
+<body onload="init()" > 
+<div class ="header ">
+<img src="../images/headericon.png" alt="Smiley face" height="60" width="80">
+My Book
+<div class ="floatRight">
+	<button class ="buttonStyle" type="button" onclick= "logout()" >Sign Out</button> 
+</div>
+</div>
+
+<div class="navigation">
+		<ul>
+			<li onmousedown="loadFeeds()" id ="feedMenu" >Feed</li><br>
+			<li onmousedown="loadProfile()"  id ="profileMenu" >Profile</li>
+		</ul>
+</div>
+
+<div class="content">
+	<div id="feedDetails" >	
+		<br>	
+		<input type = "text"  class ="inputStyle" id="feedValue">
+		<button class ="buttonStyle" type="button" onclick= "addRow()" >Post</button> <br>
+		<div id="myExample">	
+			<div id="mydata">	
+				<table id="myTableData"   cellpadding="2">			
+				</table>
+			&nbsp;<br/>
+			</div>
+	
+		</div>
+		
+	</div> 
+	
+	<div id="profileDetails">
+		<h2>Profile</h2>
+		<table style="width:100%">
+		<tr><td>
+			<div id="profile">
+				<form id="profileform">
+					<input  type="value" id="name" placeholder="Name"></input></br></br>
+					<input  type="number" id="age" placeholder="Age"></input></br></br>
+					<input  type="number" id="phoneno" placeholder="PhoneNo"></input></br></br>
+					<input  type="email" id="email" placeholder="Email"></input></br></br>
+					<textarea id="address"rows="5" cols="25"></textarea>
+					<input  type="hidden" id="image-value" name="selected_image" value="" /></br></br>
+					<input  type="file" id="imagefile" accept="image/*" onchange="showProfileImage(this)" name="file"></br></br>
+					<input  type="submit" name="button" id="button" value="Save" onClick="saveProfile()" />
+				</form>
+			</div>
+			</td>
+			<td>
+			</td>
+		</tr>
+		</table>
+
+	</div>
+</div>
+	
+<div class="footer">
+Copyright © Object-Frontier.com
+</div>
+</body>
+</html>
