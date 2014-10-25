@@ -30,6 +30,7 @@ function loadProfile(){
 	try {	
 		document.getElementById("profileDetails").style.display="block";
 		document.getElementById("feedDetails").style.display="none";
+		document.getElementById("saveProfile").disabled = true;   
 		if(profileData != undefined || profileData != null) {
 			document.getElementById("name").value = profileData.name;
 			document.getElementById("age").value = profileData.age;
@@ -41,6 +42,27 @@ function loadProfile(){
 	}catch (e) {
 		console.log(e);
 	}	
+};
+
+function SetButtonStatus(sender, target) {      
+    document.getElementById("saveProfile").disabled = true;  
+	var isNameValid = validateField(document.getElementById("name").value);
+	var isageValid = validateField(document.getElementById("age").value);
+	var isPhoneValid = validateField(document.getElementById("phone").value);
+	var isemailValid = validateField(document.getElementById("email").value);
+	var isaddValid = validateField(document.getElementById("address").value);
+	//var ispicValid = validateField(document.getElementById("profilePic").value);
+	
+	if(isNameValid && isageValid && isPhoneValid && isemailValid && isaddValid ){	
+	 document.getElementById("saveProfile").disabled = false;  
+	}
+};
+
+function validateField(fieldValue){
+    if (fieldValue==null || fieldValue=="") {      
+        return false;
+    }
+	return true;
 };
 
 function showProfilePicture(pic){
