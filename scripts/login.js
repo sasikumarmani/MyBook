@@ -1,3 +1,4 @@
+"use strict";
 function login() {
 	if ( document.myform.username.value === "Developer"  && document.myform.pword.value ==="PasDev"){				
 		location.href = "Home.html";

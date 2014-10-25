@@ -1,3 +1,5 @@
+"use strict";
+
 var profile = { name:undefined, age:undefined, phone:undefined, email:undefined, address:undefined, profilePic:undefined};
 
 var profileData;

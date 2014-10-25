@@ -1,3 +1,4 @@
+"use strict";
 var feedList ;
 var feed = { _id:undefined, _type:undefined, _time:undefined};
 var feedCount = 0;
