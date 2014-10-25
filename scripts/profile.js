@@ -20,8 +20,7 @@ function saveProfile() {
 			document.getElementById("email").value,
 			document.getElementById("address").value,
 			document.getElementById("profilePic").value);	
-			console.log(profileData);
-			localStorage.setItem("profile", JSON.stringify(profileData));
+			console.log(profileData);			
 	}catch (e) {
 		console.log(e);
 	}			
@@ -31,8 +30,6 @@ function loadProfile(){
 	try {	
 		document.getElementById("profileDetails").style.display="block";
 		document.getElementById("feedDetails").style.display="none";
-		profile = localStorage.getItem("profile");
-		var profileData = JSON.parse(profile);
 		if(profileData != undefined || profileData != null) {
 			document.getElementById("name").value = profileData.name;
 			document.getElementById("age").value = profileData.age;
