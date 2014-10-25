@@ -3,6 +3,7 @@
 
 <head>
 <link rel="stylesheet" href="../styles/feed.css"/>
+<link rel="stylesheet" href="../styles/profile.css"/>
 <script src="../scripts/feed.js"></script>
 </head>
 
@@ -39,19 +40,20 @@ My Book
 	</div> 
 	
 	<div id="profileDetails">
-		<h2>Profile</h2>
-		<table style="width:100%">
+		
+		<table >
 		<tr><td>
 			<div id="profile">
-				<form id="profileform">
-					<input  type="value" id="name" placeholder="Name"></input></br></br>
-					<input  type="number" id="age" placeholder="Age"></input></br></br>
-					<input  type="number" id="phoneno" placeholder="PhoneNo"></input></br></br>
-					<input  type="email" id="email" placeholder="Email"></input></br></br>
-					<textarea id="address"rows="5" cols="25"></textarea>
-					<input  type="hidden" id="image-value" name="selected_image" value="" /></br></br>
-					<input  type="file" id="imagefile" accept="image/*" onchange="showProfileImage(this)" name="file"></br></br>
-					<input  type="submit" name="button" id="button" value="Save" onClick="saveProfile()" />
+				<form id="profileForm">
+				<br>
+					<input class ="profileinputStyle" type="value" id="name" placeholder="Name"></input></br></br>
+					<input class ="profileinputStyle" type="number" id="age" placeholder="Age"></input></br></br>
+					<input  class ="profileinputStyle"type="number" id="phone" placeholder="Phone"></input></br></br>
+					<input  class ="profileinputStyle" type="email" id="email" placeholder="Email"></input></br></br>
+					<textarea class ="profileinputStyle" id="address"rows="5" cols="25" placeholder = " Address" ></textarea>
+					<input  class ="profileinputStyle" type="hidden" id="image-value" name="selected_image" value="" /></br></br>
+					<input  class ="profileinputStyle"  type="file" id="imagefile" accept="image/*" onchange="showProfileImage(this)" name="file"></br></br>
+					<input  class ="profilebuttonStyle" type="submit" name="button" id="button" value="Save" onClick="saveProfile()" />
 				</form>
 			</div>
 			</td>
