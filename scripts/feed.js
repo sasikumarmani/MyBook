@@ -39,7 +39,7 @@ function loadFeeds(){
 				row.insertCell(0).innerHTML='<img src="../images/back.png" alt="Smiley face" height="30" width="30">';		
 				row.insertCell(1).innerHTML= currentFeed.content;
 				row.insertCell(2).innerHTML= currentFeed._time;
-				row.insertCell(3).innerHTML= '<input type="button" value = "Delete" onClick="Javacsript:deleteFeed(this)">';
+				row.insertCell(3).innerHTML= '<input type="button" class ="deletebutton" onClick="Javacsript:deleteFeed(this)">';	
 			}
 		  }
     }catch(err) {
@@ -55,10 +55,7 @@ function resetViewAndTable(){
 	table.innerHTML = "";
 };
 
-function loadProfile(){
-	document.getElementById("profileDetails").style.display="block";
-	document.getElementById("feedDetails").style.display="none";
-};
+
 
 function addRow() {		 
 	var feedValue = document.getElementById("feedValue").value;
@@ -72,10 +69,11 @@ function addRow() {
     var row = table.insertRow(rowCount);
 	var currentTime = new Date();	
 	var createdTime = currentTime.getMonth() + 1+"/"+currentTime.getDate()+"/"+currentTime.getFullYear()+" "+convertTimeByDate(currentTime);
-	row.insertCell(0).innerHTML='<img src="../images/back.png" alt="Smiley face" height="30" width="30">';		
+	row.insertCell(0).innerHTML='<img src="../images/back.png" alt="" height="30" width="30">';		
 	row.insertCell(1).innerHTML= feedValue;
 	row.insertCell(2).innerHTML= createdTime;
-	row.insertCell(3).innerHTML= '<input type="button" value = "Delete" onClick="Javacsript:deleteFeed(this)">';	
+	row.insertCell(3).innerHTML= '<input type="button" class ="deletebutton"  onClick="Javacsript:deleteFeed(this)">';	
+	
 	var feedObjectType ="text";
 	var feedObject;
 	

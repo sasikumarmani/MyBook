@@ -79,3 +79,10 @@ border: 2px solid #a1a1a1;
 width: 700px;
 border-radius: 35px;
 }
+
+.deletebutton {
+  background-image: url('../images/DeleteRed.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  cursor:pointer;
+}
