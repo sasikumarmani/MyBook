@@ -1,8 +1,7 @@
 .header {
     background-color:#FFC2F0;
-    color:yellow;
 	width:98%;
-    padding:10px;
+    padding:18px;
 	text-align:left;	
 	background-image: url('../images/headerbck.png');
 	background-size: 100% 100%;
@@ -12,7 +11,8 @@
 .section {   
     padding:200px;	
 	background-size: 90% 90%;
-    background-repeat: no-repeat;
+	width:99%;
+    background-repeat: no-repeat;		
 	background-image: url('../images/mybookmain.png');
 	background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -31,18 +31,25 @@
 }
 body {
     font-size: 200%;
-	font-family:verdana;
+	font-family:calibri;
 	height:100%;
 }
 .buttonStyle {
 border: 2px solid #a1a1a1;
-background: #dddddd;
+background: #6495ED;
 width: 100px;
-border-radius: 25px;
+border-radius: 5px;
 }
 
 .inputStyle {
 border: 2px solid #a1a1a1;
 width: 200px;
-border-radius: 35px;
+border-radius: 3px;
+}
+.floatLeft {
+    float: left;
+	color:#6495ED;
+    font-size: 100%;
+	font-family:calibri;
+	height:100%;
 }
